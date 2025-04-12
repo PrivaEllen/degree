@@ -1,0 +1,9 @@
+node_modules
+projects
+
+.idea
+.vs
+
+tsconfig.*.json
+
+.DS_Store

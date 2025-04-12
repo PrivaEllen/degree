@@ -1,0 +1,24 @@
+{
+    "compilerOptions": {
+        "strict": true,
+        "baseUrl": ".",
+        "rootDir": "./",
+        "module": "CommonJS",
+        "moduleResolution": "Node",
+        "target": "ESNext",
+        "lib": ["ESNext"],
+        "allowJs": true,
+        "jsx": "react-jsx",
+        "noEmit": true,
+        "skipLibCheck": true,
+        "isolatedModules": true,
+        "esModuleInterop": true,
+        "strictNullChecks": true,
+        "resolveJsonModule": true,
+        "downlevelIteration": true,
+        "allowSyntheticDefaultImports": true,
+        "forceConsistentCasingInFileNames": true,
+        "types": ["node", "web", "./projects/project1/types/global"]
+    },
+    "include": ["./**/*.ts"]
+}
