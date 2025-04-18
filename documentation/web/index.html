@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <title>TS Autodoc</title>
+    </head>
+    <body>
+        <header class="header">
+            <div class="header__content">
+                <img
+                    src="/documentation/web/assets/logo.svg"
+                    alt="Logo image"
+                />
+                <span class="title">TS-AUTODOC</span>
+            </div>
+        </header>
+        <main>
+            <div class="entitiesList">
+                <input placeholder="Поиск" />
+                <img
+                    src="/documentation/web/assets/searchIcon.svg"
+                    alt="Search icon"
+                    class="searchIcon"
+                />
+                <div class="entitiesList__item entitiesList__item_active">
+                    Button
+                </div>
+                <div class="entitiesList__item">Checkbox</div>
+                <div class="entitiesList__item">Input</div>
+            </div>
+            <div class="entity">
+                <div class="entity__name">Button</div>
+                <div>
+                    Кликабельная кнопка, которую можно использовать в формах или
+                    в любом другом месте приложения
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Название</th>
+                            <th>Тип</th>
+                            <th>Описание</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>disabled?</td>
+                            <td>boolean</td>
+                            <td>Блокировать кнопку (да/нет)</td>
+                        </tr>
+                        <tr>
+                            <td>color?</td>
+                            <td class="link">ButtonColor</td>
+                            <td>Цвет кнопки</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="entity__refTypes refTypes">
+                    <div class="refTypes__type type">
+                        <div class="link">ButtonColor</div>
+                        <div class="type__text">
+                            type ButtonColor = keyof typeof EButtonColor;
+                            <br />enum EButtonColor {<br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;primary = 'primary',<br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;secondary = 'secondary',<br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;error = 'error',<br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;linkPrimary =
+                            'linkPrimary',<br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;blue30 = 'blue30',<br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;blue60 = 'blue60',<br />
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>

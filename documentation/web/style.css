@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono&display=swap');
+
+:root {
+    --background-color: #f8fefb;
+    --primary-color: #48aa86;
+    --secondary-color: #edfbf2;
+    --muted-color: #e1f8ec;
+    --code-block-color: #f2f7f4;
+
+    --link-color: #0088cc;
+    --text-color: #000;
+    --text-code: #4b4b4b;
+    --accent-text-color: #14532d;
+    --text-light-color: #f8fefb;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    font-family: 'Raleway';
+    box-sizing: border-box;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+body {
+    gap: 32px;
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    height: 64px;
+    display: flex;
+    padding: 0 80px;
+    background-color: var(--muted-color);
+}
+
+.header * {
+    background-color: inherit;
+}
+
+.header__content {
+    gap: 24px;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    background-color: inherit;
+    border-bottom: 1px solid var(--primary-color);
+}
+
+.title {
+    font-size: 20px;
+}
+
+main {
+    gap: 48px;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    padding: 0 80px 16px;
+}
+
+.entitiesList {
+    gap: 8px;
+    display: flex;
+    flex-basis: 25%;
+    position: relative;
+    flex-direction: column;
+}
+
+input {
+    border: none;
+    height: 32px;
+    padding-left: 24px;
+    padding-right: 8px;
+    background-color: var(--code-block-color);
+}
+
+input:focus {
+    outline: none;
+}
+
+input::placeholder {
+    font-size: 12px;
+}
+
+.searchIcon {
+    width: 12px;
+    height: 12px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: translate(8px, 85%);
+}
+
+.entitiesList__item {
+    width: 100%;
+    height: 48px;
+    cursor: pointer;
+
+    display: flex;
+    padding: 0 16px;
+    border-radius: 4px;
+    align-items: center;
+
+    color: var(--accent-text-color);
+    border: 1px solid var(--primary-color);
+}
+
+.entitiesList__item:hover {
+    color: var(--text-light-color);
+    background-color: var(--primary-color);
+}
+
+.entitiesList__item_active {
+    color: var(--text-light-color);
+    background-color: var(--primary-color);
+}
+
+.entity {
+    gap: 16px;
+    display: flex;
+    flex-basis: 75%;
+    flex-direction: column;
+}
+
+.entity__name {
+    font-size: 20px;
+    color: var(--accent-text-color);
+}
+
+table {
+    border-collapse: collapse;
+    border: 1px solid var(--primary-color);
+}
+
+thead tr {
+    background-color: var(--muted-color);
+}
+
+tr {
+    height: 48px;
+    cursor: auto;
+}
+
+tr * {
+    background-color: inherit;
+}
+
+th,
+td {
+    padding: 0 8px;
+    text-align: start;
+    border: 1px solid var(--primary-color);
+}
+
+.link {
+    cursor: pointer;
+    color: var(--link-color);
+}
+
+.entity__refTypes {
+    gap: 24px;
+    display: flex;
+    padding: 12px 0 8px;
+    flex-direction: column;
+}
+
+.refTypes__type {
+    gap: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.type__text {
+    padding: 8px;
+    line-height: 24px;
+    border-radius: 4px;
+    color: var(--text-code);
+    font-family: 'IBM Plex Mono';
+    background-color: var(--code-block-color);
+}
